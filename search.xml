@@ -1,37 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[win10应用商店打不开除根源的解决办法]]></title>
-    <url>%2F2019%2F08%2F18%2Fpage3%2F</url>
-    <content type="text"><![CDATA[win10应用商店不能联网的情况我每次安装一个新系统都会遇到win10应用商店打不开的情况，然后基本上就没管，但是这次为了下载一个东西，我得需要win10应用商店，但是总是连接不上用VPN也无法进入，这让我很烦恼，网上大部分的方法都不管用，点了刷新都是下图的情况，出现错误代码0x80131500。 出现错误代码0x80131500解决方法后面在一个博客看到的一个方法还挺管用，而且方便，具体方法是按win键+R键打开运行窗口然后在输入框里面输入inetcpl.cpl，然后回车点击高级将带有TLS的选项全部勾上，然后点击应用-&gt;确定，然后就可以打开应用商店了。 如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>win10应用商店打不开除根源的解决办法</title>
+      <link href="/2019/08/18/page3/"/>
+      <url>/2019/08/18/page3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="win10应用商店不能联网的情况"><a href="#win10应用商店不能联网的情况" class="headerlink" title="win10应用商店不能联网的情况"></a>win10应用商店不能联网的情况</h1><p>我每次安装一个新系统都会遇到win10应用商店打不开的情况，然后基本上就没管，但是这次为了下载一个东西，我得需要win10应用商店，但是总是连接不上用VPN也无法进入，这让我很烦恼，网上大部分的方法都不管用，点了刷新都是下图的情况，出现错误代码0x80131500。</p><a id="more"></a><p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566135594370&di=28e31614184d3a77469565cb80f83f8b&imgtype=0&src=http%3A%2F%2Fwww.leoruby.net%2Fmyblogimages%2F00537.JPG" alt></p><h1 id="出现错误代码0x80131500解决方法"><a href="#出现错误代码0x80131500解决方法" class="headerlink" title="出现错误代码0x80131500解决方法"></a>出现错误代码0x80131500解决方法</h1><p>后面在一个博客看到的一个方法还挺管用，而且方便，具体方法是按<strong>win键+R键</strong>打开运行窗口然后在输入框里面输入<strong>inetcpl.cpl</strong>，然后回车点击高级将带有TLS的选项全部勾上，然后点击应用-&gt;确定，然后就可以打开应用商店了。</p><p><img src="1.png" alt><br><img src="2.png" alt><br><img src="3.png" alt></p><h1 id="如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪"><a href="#如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪" class="headerlink" title="如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪"></a>如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪</h1>]]></content>
+      
+      
       <categories>
-        <category>Windows</category>
+          
+          <category> Windows </category>
+          
       </categories>
-      <tags>
-        <tag>Windows</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Windows下SSR机场订阅使用教程]]></title>
-    <url>%2F2019%2F07%2F30%2Fpage1%2F</url>
-    <content type="text"><![CDATA[免费且相对稳定的科学上网方式：ShadowSocksR简称SSR科学上网方式有很多种：1.运用VPN软件，2.搭建VPS使用SSR，3.白嫖“机场”使用SSR，4.V2Ray。前两种方式都很好，但是购买一个VPN软件和搭建VPS服务器是需要很大一笔钱，而且VPN软件有很多不稳定，虽然也有免费的VPN软件，但是只能备用，速度很慢，所以我推荐使用第三种方式，关于第四种其实跟SSR差不多，可以自行了解。（建议看完一遍本教程再操作） 安装及运行SSRSSR的下载链接下载完之后是一个压缩包，然后在任意一个地方新建一个名为SSR的文件夹，并且把下载好的SSR压缩包解压在SSR文件夹里面，然后双击4.0的exe应用程序,会发现后台已经出现了一个小飞机,现在是无法使用，先右击小飞机，然后选择系统代理模式-&gt;直连模式。 配置及使用SSR复制订阅链接以进行下一步操作目前我这里有一个一直在用的免费高速且稳定的“机场”：http://coolgay.live/ 打开之后点击开始使用，然后注册一个账号（要记住账号和密码），注册好之后再次登录会进入套餐购买界面，我们选择0元这个套餐，完成支付后会赠送有10GB的流量，在“可用流量”处可以看到，然后点击上方的签到领流量处进行签到并领取一些流量（尽量每天都签到，因为超过长时间未签到会自动销毁账号，而且10GB流量很快就会用完）。现在看到页面最下方的订阅地址，这个链接就是我们需要的东西，可以点击“点击复制SSR订阅链接”将其复制下来，然后可以将这个网站收藏起来。 配置SSR现在右击小飞机选择服务器订阅-&gt;SSR服务器订阅设置，它会打开一个窗口，将自动更新勾上这样每次打开SSR都会自动更新节点信息，之后点击Add按钮，然后网址右边的输入框按下Ctrl+A（全选）再按下Ctrl+V（粘粘）将刚刚复制的订阅链接粘粘在此，这样就完成了SSR的配置，然后点击确定即可。 使用SSR完成了上述操作之后我们右击小飞机点击服务器订阅-&gt;更新服务器订阅（不通过代理），等待一会会出现一个“SSR服务器订阅更新成功”的提示。然后左击小飞机会出现一个弹窗，在左边的状态栏可以看到应该有多个节点，我们选中有地名或者有免费两个字的节点（一般订阅服务器之后只有除账号还有信息以外的节点才是可以使用的），然后点击确定。再次右击小飞机选择系统代理模式-&gt;全局模式，此模式代表可以为电脑上的所有软件和网站进行代理（科学上网），在访问国内网站会有延迟，PAC模式是绕过代理国内网站，直连模式就是禁用代理。现在就可以使用SSR打开Google,YouTube,Facebook,Pornhub咳咳…这些国外的网站了。 扩展如果你想快速打开SSR，可以右击SSR应用程序，点击固定到任务栏，然后就可以直接在需要的时候将鼠标迅速移动到SSR那个小飞机图标一点就可以做你想干的事情了🤭，另外我整合的一些可用“机场链接”（持续更新），还有一个非常强大的网站：https://doubibackup.com/ （逗比根据地，需要科学上网）这里包含很多科学上网的工具和教程。]]></content>
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Windows下SSR机场订阅使用教程</title>
+      <link href="/2019/07/30/page1/"/>
+      <url>/2019/07/30/page1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="免费且相对稳定的科学上网方式：ShadowSocksR简称SSR"><a href="#免费且相对稳定的科学上网方式：ShadowSocksR简称SSR" class="headerlink" title="免费且相对稳定的科学上网方式：ShadowSocksR简称SSR"></a>免费且相对稳定的科学上网方式：ShadowSocksR简称SSR</h1><p>科学上网方式有很多种：1.运用VPN软件，2.搭建VPS使用SSR，3.白嫖“机场”使用SSR，4.V2Ray。前两种方式都很好，但是购买一个VPN软件和搭建VPS服务器是需要很大一笔钱，而且VPN软件有很多不稳定，虽然也有免费的VPN软件，但是只能备用，速度很慢，所以我推荐使用第三种方式，关于第四种其实跟SSR差不多，可以自行了解。（建议看完一遍本教程再操作）</p><a id="more"></a><h1 id="安装及运行SSR"><a href="#安装及运行SSR" class="headerlink" title="安装及运行SSR"></a>安装及运行SSR</h1><p><a href="https://github.com/shadowsocksrr/shadowsocksr-csharp/releases/download/4.9.2/ShadowsocksR-win-4.9.2.zip" target="_blank" rel="noopener">SSR的下载链接</a>下载完之后是一个压缩包，然后在任意一个地方新建一个名为SSR的文件夹，并且把下载好的SSR压缩包解压在SSR文件夹里面，然后双击4.0的exe应用程序,会发现后台已经出现了一个小飞机,现在是无法使用，先右击小飞机，然后选择系统代理模式-&gt;直连模式。<br><img src="4.jpg" alt></p><h1 id="配置及使用SSR"><a href="#配置及使用SSR" class="headerlink" title="配置及使用SSR"></a>配置及使用SSR</h1><h2 id="复制订阅链接以进行下一步操作"><a href="#复制订阅链接以进行下一步操作" class="headerlink" title="复制订阅链接以进行下一步操作"></a>复制订阅链接以进行下一步操作</h2><p>目前我这里有一个一直在用的免费高速且稳定的“机场”：<a href="http://coolgay.live/" target="_blank" rel="noopener">http://coolgay.live/</a> 打开之后点击开始使用，然后注册一个账号（要记住账号和密码），注册好之后再次登录会进入套餐购买界面，我们选择0元这个套餐，完成支付后会赠送有10GB的流量，在“可用流量”处可以看到，然后点击上方的签到领流量处进行签到并领取一些流量（尽量每天都签到，因为超过长时间未签到会自动销毁账号，而且10GB流量很快就会用完）。现在看到页面最下方的订阅地址，这个链接就是我们需要的东西，可以点击“点击复制SSR订阅链接”将其复制下来，然后可以将这个网站收藏起来。<br><img src="000.jpg" alt></p><h2 id="配置SSR"><a href="#配置SSR" class="headerlink" title="配置SSR"></a>配置SSR</h2><p>现在右击小飞机选择服务器订阅-&gt;SSR服务器订阅设置，它会打开一个窗口，将自动更新勾上这样每次打开SSR都会自动更新节点信息，之后点击Add按钮，然后网址右边的输入框按下Ctrl+A（全选）再按下Ctrl+V（粘粘）将刚刚复制的订阅链接粘粘在此，这样就完成了SSR的配置，然后点击确定即可。<br><img src="0.png" alt></p><h2 id="使用SSR"><a href="#使用SSR" class="headerlink" title="使用SSR"></a>使用SSR</h2><p>完成了上述操作之后我们右击小飞机点击服务器订阅-&gt;更新服务器订阅（不通过代理），等待一会会出现一个“SSR服务器订阅更新成功”的提示。<br><img src="13.png" alt><br>然后左击小飞机会出现一个弹窗，在左边的状态栏可以看到应该有多个节点，我们选中有地名或者有免费两个字的节点（一般订阅服务器之后只有除账号还有信息以外的节点才是可以使用的），然后点击确定。<br><img src="12.png" alt><br>再次右击小飞机选择系统代理模式-&gt;全局模式，此模式代表可以为电脑上的所有软件和网站进行代理（科学上网），在访问国内网站会有延迟，PAC模式是绕过代理国内网站，直连模式就是禁用代理。现在就可以使用SSR打开Google,YouTube,Facebook,Pornhub咳咳…这些国外的网站了。<br><img src="15.png" alt></p><h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><p>如果你想快速打开SSR，可以右击SSR应用程序，点击固定到任务栏，然后就可以直接在需要的时候将鼠标迅速移动到SSR那个小飞机图标一点就可以做你想干的事情了🤭，另外我整合的一些可用<a href="https://psblog.xyz/2019/07/30/page1/SSR.html" target="_blank" rel="noopener">“机场链接”</a>（持续更新），还有一个非常强大的网站：<a href="https://doubibackup.com/" target="_blank" rel="noopener">https://doubibackup.com/</a> （逗比根据地，需要科学上网）这里包含很多科学上网的工具和教程。<br><img src="17.jpg" alt></p>]]></content>
+      
+      
       <categories>
-        <category>科学上网</category>
+          
+          <category> 科学上网 </category>
+          
       </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>科学上网</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[微软系统图片隐写]]></title>
-    <url>%2F2019%2F07%2F15%2Fpage0%2F</url>
-    <content type="text"><![CDATA[Windows系统下的图片隐写术图片隐写术涉及密码学且有很多种，这里教大家两种比较简单且常用的。 运用CMD命令行将压缩文件写入首先在同一个目录里面准备一个图片(.JPEG/.JPG/.PNG/.GIF…)和一个文本或者文件，将你需要传达的信息写入.txt文本，然后将写好的文本或者文件/文件夹利压缩工具进行压缩，压缩后文件的扩展名应为.rar或.zip，然后利用以下👇命令进行隐写。 123Microsoft Windows [版本 xxx](c) 2019 Microsoft Corporation。保留所有权利。C:\Users\Administrator&gt;copy /b xxx.png + xxx.rar xxx.png 如何破解这个呢，直接把已经隐写的图片的扩展名改为.rar或者.zip即可，现在可以试试整个过程. 将信息写入属性右击一个图片点击属性然后点击详细信息，填写备注就OK，如何查看就不用说了。 如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪]]></content>
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+            <tag> 科学上网 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>微软系统图片隐写</title>
+      <link href="/2019/07/15/page0/"/>
+      <url>/2019/07/15/page0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Windows系统下的图片隐写术"><a href="#Windows系统下的图片隐写术" class="headerlink" title="Windows系统下的图片隐写术"></a>Windows系统下的图片隐写术</h1><p>图片隐写术涉及密码学且有很多种，这里教大家两种比较简单且常用的。</p><a id="more"></a><h1 id="运用CMD命令行将压缩文件写入"><a href="#运用CMD命令行将压缩文件写入" class="headerlink" title="运用CMD命令行将压缩文件写入"></a>运用CMD命令行将压缩文件写入</h1><p>首先在同一个目录里面准备一个图片(.JPEG/.JPG/.PNG/.GIF…)和一个文本或者文件，将你需要传达的信息写入.txt文本，然后将写好的文本或者文件/文件夹利压缩工具进行压缩，压缩后文件的扩展名应为.rar或.zip，然后利用以下👇命令进行隐写。</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Microsoft Windows [版本 xxx]</span><br><span class="line">(c) <span class="number">2019</span> Microsoft Corporation。保留所有权利。</span><br><span class="line">C:\Users\Administrator&gt;copy /b xxx.png + xxx.rar xxx.png</span><br></pre></td></tr></table></figure><p>如何破解这个呢，直接把已经隐写的图片的扩展名改为.rar或者.zip即可，现在可以试试整个过程.</p><h1 id="将信息写入属性"><a href="#将信息写入属性" class="headerlink" title="将信息写入属性"></a>将信息写入属性</h1><p>右击一个图片点击属性然后点击详细信息，填写备注就OK，如何查看就不用说了。</p><p><img src="img/%E6%88%AA%E5%9B%BE.jpg" alt="隐写"></p><h1 id="如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪"><a href="#如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪" class="headerlink" title="如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪"></a>如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪</h1>]]></content>
+      
+      
       <categories>
-        <category>Windows</category>
+          
+          <category> Windows </category>
+          
       </categories>
-      <tags>
-        <tag>Windows</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
