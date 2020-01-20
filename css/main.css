@@ -1843,7 +1843,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d16e98;
+  background: #ffb18e;
 }
 .feed-link,
 .chat {
@@ -2901,16 +2901,16 @@ ul.breadcrumb li+li:last-child {
   text-overflow: ellipsis;
 }
 body {
-  background: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575663763385&di=60b36470fe6ca67b96d6f47c5672c7a9&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fbaike%2Fpic%2Fitem%2Fbd315c6034a85edfa4a4ae1146540923dd5475d3.jpg");
+  background: url("https://darkabyss.top/images/back.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
 }
 .main-inner {
-  background: rgba(0,0,0,0);
+  background: #9acd32;
   opacity: 0.8;
 }
 .header-inner {
-  opacity: 1;
+  opacity: 0.8;
 }
