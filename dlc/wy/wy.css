@@ -1,0 +1,85 @@
+body {
+    background-image: url(http://www.qqoi.cn/img_bizhi/189257769.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+div {
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+}
+
+img {
+    margin: 20px 0;
+    display: inline-block;
+    width: 400px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 5px rgb(153, 69, 69 , 0.8);
+    filter: grayscale(50%);
+    animation: 3s linear 1s infinite alternate slidein;
+}
+
+img:hover {
+    height: 348px;
+    box-shadow: 0px 20px 5px 5px #b37171cc;
+    animation: jian 100s infinite;
+}
+
+img:active {
+    margin: 20px 0;
+    display: inline-block;
+    width: 400px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 5px rgb(153, 69, 69);
+}
+
+.i1 {
+    margin: 10px 0;
+    display: inline-block;
+    width: 400px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 5px rgb(153, 69, 69 , 0.8);
+    animation: 3s linear 1s infinite alternate slidein1;
+}
+
+.i2 {
+    margin: 20px 0;
+    display: inline-block;
+    width: 400px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 5px rgb(153, 69, 69 , 0.8);
+    animation: 3s linear 1s infinite alternate slidein2;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 500;
+    font-family: cursive;
+    color: rgb(116, 124, 226);
+    text-shadow: 0px 5px 4px rgb(212, 125, 212);
+}
+
+@keyframes slidein {
+    from { margin: 0px 50px; }
+    to   { margin: 20px 0px; }
+}
+
+@keyframes slidein1 {
+    from { margin: 50px 0px; }
+    to   { margin: 0px 20px; }
+}
+
+@keyframes slidein2 {
+    from { margin: 0px 50px; }
+    to   { margin: 20px 0px; }
+}
+
+@keyframes jian {
+    from { filter: initial; }
+}
