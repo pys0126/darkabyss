@@ -6,11 +6,11 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://darkabyss.top/"/>
-  <updated>2020-03-17T11:56:17.649Z</updated>
+  <updated>2020-05-27T06:53:14.555Z</updated>
   <id>http://darkabyss.top/</id>
   
   <author>
-    <name>DKA-1</name>
+    <name>04rk46y5s</name>
     
   </author>
   
@@ -20,17 +20,21 @@
     <title>微信QQ定时发消息</title>
     <link href="http://darkabyss.top/2020/02/22/page5/"/>
     <id>http://darkabyss.top/2020/02/22/page5/</id>
-    <published>2020-02-22T14:32:18.634Z</published>
-    <updated>2020-03-17T11:56:17.649Z</updated>
+    <published>2020-02-22T14:32:18.000Z</published>
+    <updated>2020-05-27T06:53:14.555Z</updated>
     
-    <content type="html"><![CDATA[<html><head></head><body><h1 id="为何出此脚本"><a href="#为何出此脚本" class="headerlink" title="为何出此脚本"></a>为何出此脚本</h1><p>由于疫情我们不能去学校上学，所以流行起了网课，我们班就是每天QQ群里签到，然后共享位置，在群里上课，但是要完成签到和共享位置必须得很早起床，对于我这种不想起床的人来说这是非常痛苦的，遇巧的是正好我在之前学习了lua语言和新兴的辅助软件“节点精灵”，所以为了不起这么早，就写了此脚本，任何人可用。</p><a id="more"></a><h1 id="运行并配置辅助软件"><a href="#运行并配置辅助软件" class="headerlink" title="运行并配置辅助软件"></a>运行并配置辅助软件</h1><p>要使脚本起作用需要下载<a href="https://share.weiyun.com/5kO8YBc" target="_blank" rel="noopener">节点精灵</a>，下载好后打开会提示你开启无障碍服务，点击前往开启，然后跳转到无障碍设置，点击节点精灵，然后点击那个滑块，提示是否启用点确定。<br><img alt data-src="1.jpg"></p><h1 id="下载并运行脚本"><a href="#下载并运行脚本" class="headerlink" title="下载并运行脚本"></a>下载并运行脚本</h1><p>配置好后，进入节点精灵主界面，这里我已经把脚本上传到了官方，所以直接点击主界面的QQ，然后会看到2个脚本，后面那个就是我上传的脚本，可以直接下载，下载好后直接点击运行即可，运行后按照图4样板填写即可，如果要关闭的话，直接点击悬浮窗的红色停止按钮即可，另外如果共享人数没有达到指定人数就会每隔五分钟持续打开共享的。<br><img alt data-src="2.jpg"></p><h1 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h1><p>此脚本还有隐藏功能，对于早上签到如果没有发现老师或者同学签到是不会签到的，只有当老师或者同学发送了签到才发送签到，这个功能只能用于QQ。此脚本不仅限于签到，像一些需要在某个时间发消息，但是在那个时间没有闲手，那么就可以用到这个脚本，这就是这个脚本的作用。</p></body></html>]]></content>
+    <content type="html"><![CDATA[<h1 id="为何出此脚本"><a href="#为何出此脚本" class="headerlink" title="为何出此脚本"></a>为何出此脚本</h1><p>由于疫情我们不能去学校上学，所以流行起了网课，我们班就是每天QQ群里签到，然后共享位置，在群里上课，但是要完成签到和共享位置必须得很早起床，对于我这种不想起床的人来说这是非常痛苦的，遇巧的是正好我在之前学习了lua语言和新兴的辅助软件“节点精灵”，所以为了不起这么早，就写了此脚本，任何人可用。</p><a id="more"></a><h1 id="运行并配置辅助软件"><a href="#运行并配置辅助软件" class="headerlink" title="运行并配置辅助软件"></a>运行并配置辅助软件</h1><p>要使脚本起作用需要下载<a href="https://share.weiyun.com/5kO8YBc" target="_blank" rel="noopener">节点精灵</a>，下载好后打开会提示你开启无障碍服务，点击前往开启，然后跳转到无障碍设置，点击节点精灵，然后点击那个滑块，提示是否启用点确定。<br><img src="1.jpg" alt=""></p><h1 id="下载并运行脚本"><a href="#下载并运行脚本" class="headerlink" title="下载并运行脚本"></a>下载并运行脚本</h1><p>配置好后，进入节点精灵主界面，这里我已经把脚本上传到了官方，所以直接点击主界面的QQ，然后会看到2个脚本，后面那个就是我上传的脚本，可以直接下载，下载好后直接点击运行即可，运行后按照图4样板填写即可，如果要关闭的话，直接点击悬浮窗的红色停止按钮即可，另外如果共享人数没有达到指定人数就会每隔五分钟持续打开共享的。<br><img src="2.jpg" alt=""></p><h1 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h1><p>此脚本还有隐藏功能，对于早上签到如果没有发现老师或者同学签到是不会签到的，只有当老师或者同学发送了签到才发送签到，这个功能只能用于QQ。此脚本不仅限于签到，像一些需要在某个时间发消息，但是在那个时间没有闲手，那么就可以用到这个脚本，这就是这个脚本的作用。</p>]]></content>
     
     <summary type="html">
     
-      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;为何出此脚本&quot;&gt;&lt;a href=&quot;#为何出此脚本&quot; class=&quot;headerlink&quot; title=&quot;为何出此脚本&quot;&gt;&lt;/a&gt;为何出此脚本&lt;/h1&gt;&lt;p&gt;由于疫情我们不能去学校上学，所以流行起了网课，我们班就是每天QQ群里签到，然后共享位置，在群里上课，但是要完成签到和共享位置必须得很早起床，对于我这种不想起床的人来说这是非常痛苦的，遇巧的是正好我在之前学习了lua语言和新兴的辅助软件“节点精灵”，所以为了不起这么早，就写了此脚本，任何人可用。&lt;/p&gt;
+      &lt;h1 id=&quot;为何出此脚本&quot;&gt;&lt;a href=&quot;#为何出此脚本&quot; class=&quot;headerlink&quot; title=&quot;为何出此脚本&quot;&gt;&lt;/a&gt;为何出此脚本&lt;/h1&gt;&lt;p&gt;由于疫情我们不能去学校上学，所以流行起了网课，我们班就是每天QQ群里签到，然后共享位置，在群里上课，但是要完成签到和共享位置必须得很早起床，对于我这种不想起床的人来说这是非常痛苦的，遇巧的是正好我在之前学习了lua语言和新兴的辅助软件“节点精灵”，所以为了不起这么早，就写了此脚本，任何人可用。&lt;/p&gt;
     
     </summary>
     
+    
+      <category term="Android" scheme="http://darkabyss.top/tags/Android/"/>
+    
+      <category term="Lua" scheme="http://darkabyss.top/tags/Lua/"/>
     
   </entry>
   
@@ -111,13 +115,13 @@
     <link href="http://darkabyss.top/2019/07/15/page0/"/>
     <id>http://darkabyss.top/2019/07/15/page0/</id>
     <published>2019-07-15T06:08:09.658Z</published>
-    <updated>2019-08-18T11:12:20.399Z</updated>
+    <updated>2020-05-27T06:47:13.452Z</updated>
     
-    <content type="html"><![CDATA[<html><head></head><body><h1 id="Windows系统下的图片隐写术"><a href="#Windows系统下的图片隐写术" class="headerlink" title="Windows系统下的图片隐写术"></a>Windows系统下的图片隐写术</h1><p>图片隐写术涉及密码学且有很多种，这里教大家两种比较简单且常用的。</p><a id="more"></a><h1 id="运用CMD命令行将压缩文件写入"><a href="#运用CMD命令行将压缩文件写入" class="headerlink" title="运用CMD命令行将压缩文件写入"></a>运用CMD命令行将压缩文件写入</h1><p>首先在同一个目录里面准备一个图片(.JPEG/.JPG/.PNG/.GIF…)和一个文本或者文件，将你需要传达的信息写入.txt文本，然后将写好的文本或者文件/文件夹利压缩工具进行压缩，压缩后文件的扩展名应为.rar或.zip，然后利用以下👇命令进行隐写。</p><figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Microsoft Windows [版本 <span class="type">xxx</span>]</span><br><span class="line">(c) <span class="number">2019</span> Microsoft Corporation。保留所有权利。</span><br><span class="line">C:\Users\Administrator>copy /b xxx.png + xxx.rar xxx.png</span><br></pre></td></tr></tbody></table></figure><p>如何破解这个呢，直接把已经隐写的图片的扩展名改为.rar或者.zip即可，现在可以试试整个过程.</p><h1 id="将信息写入属性"><a href="#将信息写入属性" class="headerlink" title="将信息写入属性"></a>将信息写入属性</h1><p>右击一个图片点击属性然后点击详细信息，填写备注就OK，如何查看就不用说了。</p><p><img alt="隐写" data-src="img/%E6%88%AA%E5%9B%BE.jpg"></p><h1 id="如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪"><a href="#如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪" class="headerlink" title="如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪"></a>如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪</h1></body></html>]]></content>
+    <content type="html"><![CDATA[<h1 id="Windows系统下的图片隐写术"><a href="#Windows系统下的图片隐写术" class="headerlink" title="Windows系统下的图片隐写术"></a>Windows系统下的图片隐写术</h1><p>图片隐写术涉及密码学且有很多种，这里教大家两种比较简单且常用的。</p><a id="more"></a><h1 id="运用CMD命令行将压缩文件写入"><a href="#运用CMD命令行将压缩文件写入" class="headerlink" title="运用CMD命令行将压缩文件写入"></a>运用CMD命令行将压缩文件写入</h1><p>首先在同一个目录里面准备一个图片(.JPEG/.JPG/.PNG/.GIF…)和一个文本或者文件，将你需要传达的信息写入.txt文本，然后将写好的文本或者文件/文件夹利压缩工具进行压缩，压缩后文件的扩展名应为.rar或.zip，然后利用以下👇命令进行隐写。</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Microsoft Windows [版本 <span class="type">xxx</span>]</span><br><span class="line">(c) <span class="number">2019</span> Microsoft Corporation。保留所有权利。</span><br><span class="line">C:\Users\Administrator&gt;copy /b xxx.png + xxx.rar xxx.png</span><br></pre></td></tr></table></figure><p>如何破解这个呢，直接把已经隐写的图片的扩展名改为.rar或者.zip即可，现在可以试试整个过程.</p><h1 id="将信息写入属性"><a href="#将信息写入属性" class="headerlink" title="将信息写入属性"></a>将信息写入属性</h1><p>右击一个图片点击属性然后点击详细信息，填写备注就OK，如何查看就不用说了。</p><p><img src="img/1.jpg" alt="隐写"></p><h1 id="如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪"><a href="#如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪" class="headerlink" title="如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪"></a>如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪</h1>]]></content>
     
     <summary type="html">
     
-      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;Windows系统下的图片隐写术&quot;&gt;&lt;a href=&quot;#Windows系统下的图片隐写术&quot; class=&quot;headerlink&quot; title=&quot;Windows系统下的图片隐写术&quot;&gt;&lt;/a&gt;Windows系统下的图片隐写术&lt;/h1&gt;&lt;p&gt;图片隐写术涉及密码学且有很多种，这里教大家两种比较简单且常用的。&lt;/p&gt;
+      &lt;h1 id=&quot;Windows系统下的图片隐写术&quot;&gt;&lt;a href=&quot;#Windows系统下的图片隐写术&quot; class=&quot;headerlink&quot; title=&quot;Windows系统下的图片隐写术&quot;&gt;&lt;/a&gt;Windows系统下的图片隐写术&lt;/h1&gt;&lt;p&gt;图片隐写术涉及密码学且有很多种，这里教大家两种比较简单且常用的。&lt;/p&gt;
     
     </summary>
     
