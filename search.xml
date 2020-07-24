@@ -1,67 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[安卓手机免Root安装拥有图形界面的Kali NetHunter]]></title>
-    <url>%2F2020%2F07%2F24%2Fpage6%2F</url>
-    <content type="text"><![CDATA[1.下载所需软件说明：安卓版本小于安卓5.0无法正常运行，安装完成后理论上可以运行所有Kali工具，Kali NetHunter是amr64内核。 termux （必须） NetHunter Kex （必须） PandVPN （有VPN可以无视） 2.配置Termux更新和安装工具首先在开始之前先打开PandVPN或者其他可以翻墙的工具都可以，第一次打开PandVPN需要等一会，然后进入主界面后如图，向上滑动那个滑块就行，第一次开启可能会提示你是否启用VPN标识，直接点确实即可。 第一次启动Termux的时候需要从远程服务器加载数据，可能会比较慢，耐心等待一会就行，然后出现如下界面就行，如果出现其他提示就关闭Termux用运营商网络试试。 然后执行以下命令来更新Termux软件库，如果中途停住按回车就行，然后等待一会直到出现 “ $ ” 表示更新完成 1$ apt update &amp;&amp; apt upgrade -y 接下来安装基本工具，等会安装Kali所需的几个工具，执行以下命令等待安装完成即可（出现 “ $ ” 即可） 1$ apt install curl vim wget -y 美化及创建内部存贮软目录然后安装一个终端美化工具，为什么安装这个呢，它不光是让界面好看，有个功能是可以创建手机存贮软目录，因为termux安装在根目录的，未Root用户是无法访问的，Termux也无法访问手机存贮目录，所以有了软目录就可以通过Termux访问手机存贮目录了，比如手机下载文件夹，废话不多说，执行以下命令即可安装，安装时可能会提示你给予存贮权限，点允许即可。 1$ sh -c "$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)" 如果不小心点了拒绝执行以下命令重新获取就行。 1$ termux-setup-storage 等待它自动安装，完成后会让你输入配色序号，分别是色彩样式和字体样式，我是如下设置。 1234...Enter a number, leave blank to not to change: 14...Enter a number, leave blank to not to change: 6 定制常用按键（可选）对于熟悉Linux的朋友可以配置这个，首先新建并编辑一个配置文件： 1$ vim ~/.termux/termux.properties 按 “ i ” 进入编辑模式输入以下内容： 12345# 可以自定义按键extra-keys = [ \ ['ESC','-','/','HOME','UP','END','PGUP','DEL'], \ ['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN','BKSP'] \] 修改后保存，如何重启Termux即可生效，如图： 3.开始安装Kali NetHunter下载Kali NetHunter镜像：点我 下载好后应该在手机下载目录下面，然后执行以下命令从下载目录移动镜像到Termux目录： 1$ mv storage/downloads/kalifs-arm64-full.tar.xz ~/ 镜像文件有点大，移动过程会有点慢，请耐心等待出现 “ $ ” 即可。 获取并执行安装脚本： 123$ wget -O install-nethunter-termux https://offs.ec/2MceZWr$ chmod +x install-nethunter-termux$ ./install-nethunter-termux 执行后可能会停住提示你:检测到镜像已存在是否删除重新下载[y/n] 这里输入n回车即可，然后它会解压镜像，这个过程可能10-20分钟，请耐心等待，出现如下界面说明Kali已经安装成功了。 4.使用Kali NetHunterKali NetHunter启动前命令注意：在使用Kali之前可以把PandVPN关了，以免影响网速。 在Termux执行以下命令之一： 1234567891011命令 功能 $nh 以普通用户启动Kali NetHunter命令行界面$nh kex passwd 配置KeX密码（仅在第一次使用图形界面前使用）$nh kex &amp; 建立Kali NetHunter图形界面普通用户会话$nh kex stop 停止Kali NetHunter图形界面普通用户会话（每次关闭后必须运行）# 一般常用以下命令$nh -r 以普通用户启动Kali NetHunter命令行界面$nh -r kex passwd 配置KeX密码（仅在第一次使用Root用户图形界面前使用）$nh -r kex &amp; 建立Kali NetHunter图形界面Root用户会话$nh -r kex stop 停止Kali NetHunter图形界面Root用户会话（每次关闭后必须运行）$nh -r kex kill 关闭所有KeX会话 使用图形化界面不知道如何使用图像化界面？首先，执行： 123$nh -r kex passwdpassword: #创建Kex密码，这里输入的密码是不显示的Verify: #再次确认Kex密码，这里也不会显示 如果出现 “ $ ” 表示创建成功，其他情况都说明两次输入密码不一致。然后使用以下命令开启图形界面会话。 1$ nh -r kex &amp; 出现下图表示开启成功，可以进行下一步操作。 接下来打开NetHunter KeX，然后像下图设置，然后点击右上角Connect即可进入图形界面。 扩展如果需要Kali默认的工具的话需要确保手机剩余16GB空间，然后在图形界面下打开终端，如图，然后点击右边的键盘标志打开键盘执行如下命令： 1234root@localhost:~# sudo apt update &amp;&amp; sudo apt full-upgrade... #停住就输入y，后面再停住就回车，等待完成root@localhost:~# sudo apt install kali-linux-default... #停住就输入y，后面再停住就回车，等待完成 安装到此如果还有什么问题QQ联系：1637566997]]></content>
-      <tags>
-        <tag>Android</tag>
-        <tag>Kali</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[微信QQ定时发消息]]></title>
-    <url>%2F2020%2F02%2F22%2Fpage5%2F</url>
-    <content type="text"><![CDATA[为何出此脚本由于疫情我们不能去学校上学，所以流行起了网课，我们班就是每天QQ群里签到，然后共享位置，在群里上课，但是要完成签到和共享位置必须得很早起床，对于我这种不想起床的人来说这是非常痛苦的，遇巧的是正好我在之前学习了lua语言和新兴的辅助软件“节点精灵”，所以为了不起这么早，就写了此脚本，任何人可用。 运行并配置辅助软件要使脚本起作用需要下载节点精灵，下载好后打开会提示你开启无障碍服务，点击前往开启，然后跳转到无障碍设置，点击节点精灵，然后点击那个滑块，提示是否启用点确定。 下载并运行脚本配置好后，进入节点精灵主界面，这里我已经把脚本上传到了官方，所以直接点击主界面的QQ，然后会看到2个脚本，后面那个就是我上传的脚本，可以直接下载，下载好后直接点击运行即可，运行后按照图4样板填写即可，如果要关闭的话，直接点击悬浮窗的红色停止按钮即可，另外如果共享人数没有达到指定人数就会每隔五分钟持续打开共享的。 写在最后此脚本还有隐藏功能，对于早上签到如果没有发现老师或者同学签到是不会签到的，只有当老师或者同学发送了签到才发送签到，这个功能只能用于QQ。此脚本不仅限于签到，像一些需要在某个时间发消息，但是在那个时间没有闲手，那么就可以用到这个脚本，这就是这个脚本的作用。]]></content>
-      <tags>
-        <tag>Android</tag>
-        <tag>Lua</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[安卓系统下使用SSR科学上网]]></title>
-    <url>%2F2020%2F01%2F29%2Fpage4%2F</url>
-    <content type="text"><![CDATA[安卓端使用稳定且安全的SSR对于现在的情况来说，全球的PC(电脑)端使用量在逐渐低于移动端，甚至有些家里根本没配有电脑，导致很多人都问我怎么翻墙，我直接推荐了我的]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>安卓手机免Root安装拥有图形界面的Kali NetHunter</title>
+      <link href="/2020/07/24/page6/"/>
+      <url>/2020/07/24/page6/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-下载所需软件"><a href="#1-下载所需软件" class="headerlink" title="1.下载所需软件"></a>1.下载所需软件</h2><p><strong>说明</strong>：安卓版本小于安卓5.0无法正常运行，安装完成后理论上可以运行所有Kali工具，Kali NetHunter是amr64内核。</p><a id="more"></a><p><a href="https://wws.lanzous.com/iUpQXexj2ha" target="_blank" rel="noopener">termux</a> （必须）</p><p><a href="https://wws.lanzous.com/ik4jJexj2ng" target="_blank" rel="noopener">NetHunter Kex</a> （必须）</p><p><a href="https://wws.lanzous.com/inrjNexth2f" target="_blank" rel="noopener">PandVPN</a> （有VPN可以无视）</p><h2 id="2-配置Termux"><a href="#2-配置Termux" class="headerlink" title="2.配置Termux"></a>2.配置Termux</h2><h3 id="更新和安装工具"><a href="#更新和安装工具" class="headerlink" title="更新和安装工具"></a>更新和安装工具</h3><p>首先在开始之前先打开PandVPN或者其他可以翻墙的工具都可以，第一次打开PandVPN需要等一会，然后进入主界面后如图，向上滑动那个滑块就行，第一次开启可能会提示你是否启用VPN标识，直接点确实即可。</p><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/2.jpg" alt="2" style="zoom: 25%;" /><p>第一次启动Termux的时候需要从远程服务器加载数据，可能会比较慢，耐心等待一会就行，然后出现如下界面就行，如果出现其他提示就关闭Termux用运营商网络试试。</p><p><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/1.jpg" alt="1"></p><p>然后执行以下命令来更新Termux软件库，如果中途停住按回车就行，然后等待一会直到出现 “ $ ” 表示更新完成</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> apt update &amp;&amp; apt upgrade -y</span></span><br></pre></td></tr></table></figure><p>接下来安装基本工具，等会安装Kali所需的几个工具，执行以下命令等待安装完成即可（出现 “ $ ” 即可）</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> apt install curl vim wget -y</span></span><br></pre></td></tr></table></figure><h3 id="美化及创建内部存贮软目录"><a href="#美化及创建内部存贮软目录" class="headerlink" title="美化及创建内部存贮软目录"></a>美化及创建内部存贮软目录</h3><p>然后安装一个终端美化工具，为什么安装这个呢，它不光是让界面好看，有个功能是可以创建手机存贮软目录，因为termux安装在根目录的，未Root用户是无法访问的，Termux也无法访问手机存贮目录，所以有了软目录就可以通过Termux访问手机存贮目录了，比如手机下载文件夹，废话不多说，执行以下命令即可安装，安装时可能会提示你给予存贮权限，点允许即可。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sh -c <span class="string">"<span class="variable">$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)</span>"</span></span></span><br></pre></td></tr></table></figure><p>如果不小心点了拒绝执行以下命令重新获取就行。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ termux-setup-storage</span><br></pre></td></tr></table></figure><p>等待它自动安装，完成后会让你输入配色序号，分别是<strong>色彩样式</strong>和<strong>字体样式</strong>，我是如下设置。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">Enter a number, leave blank to not to change: 14</span><br><span class="line">...</span><br><span class="line">Enter a number, leave blank to not to change: 6</span><br></pre></td></tr></table></figure><h3 id="定制常用按键（可选）"><a href="#定制常用按键（可选）" class="headerlink" title="定制常用按键（可选）"></a>定制常用按键（可选）</h3><p>对于熟悉Linux的朋友可以配置这个，首先新建并编辑一个配置文件：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> vim ~/.termux/termux.properties</span></span><br></pre></td></tr></table></figure><p>按 “ i ” 进入编辑模式输入以下内容：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 可以自定义按键</span></span><br><span class="line">extra-keys = [ \</span><br><span class="line"> [<span class="string">'ESC'</span>,<span class="string">'-'</span>,<span class="string">'/'</span>,<span class="string">'HOME'</span>,<span class="string">'UP'</span>,<span class="string">'END'</span>,<span class="string">'PGUP'</span>,<span class="string">'DEL'</span>], \</span><br><span class="line"> [<span class="string">'TAB'</span>,<span class="string">'CTRL'</span>,<span class="string">'ALT'</span>,<span class="string">'LEFT'</span>,<span class="string">'DOWN'</span>,<span class="string">'RIGHT'</span>,<span class="string">'PGDN'</span>,<span class="string">'BKSP'</span>] \</span><br><span class="line">]</span><br></pre></td></tr></table></figure><p>修改后保存，如何重启Termux即可生效，如图：</p><p><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/3.jpg" alt="3"></p><h2 id="3-开始安装Kali-NetHunter"><a href="#3-开始安装Kali-NetHunter" class="headerlink" title="3.开始安装Kali NetHunter"></a>3.开始安装Kali NetHunter</h2><p>下载Kali NetHunter镜像：<a href="https://drive.google.com/file/d/13BjoGirO0xONNeJ2FO0PcH8HV-3McrbD/view?usp=sharing" target="_blank" rel="noopener">点我</a></p><p>下载好后应该在手机下载目录下面，然后执行以下命令从下载目录移动镜像到Termux目录：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv storage/downloads/kalifs-arm64-full.tar.xz ~/</span></span><br></pre></td></tr></table></figure><p>镜像文件有点大，移动过程会有点慢，请耐心等待出现 “ $ ” 即可。</p><p>获取并执行安装脚本：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ wget -O install-nethunter-termux https://offs.ec/2MceZWr</span><br><span class="line">$ chmod +x install-nethunter-termux</span><br><span class="line">$ ./install-nethunter-termux</span><br></pre></td></tr></table></figure><p>执行后可能会停住提示你:<strong>检测到镜像已存在是否删除重新下载[y/n]</strong> 这里输入n回车即可，然后它会解压镜像，这个过程可能10-20分钟，请耐心等待，出现如下界面说明Kali已经安装成功了。</p><p><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/4.jpg" alt="4"></p><h2 id="4-使用Kali-NetHunter"><a href="#4-使用Kali-NetHunter" class="headerlink" title="4.使用Kali NetHunter"></a>4.使用Kali NetHunter</h2><h3 id="Kali-NetHunter启动前命令"><a href="#Kali-NetHunter启动前命令" class="headerlink" title="Kali NetHunter启动前命令"></a>Kali NetHunter启动前命令</h3><p><strong>注意：</strong>在使用Kali之前可以把PandVPN关了，以免影响网速。</p><p>在Termux执行以下命令之一：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">命令                  功能     </span><br><span class="line"><span class="meta">$</span><span class="bash">nh                以普通用户启动Kali NetHunter命令行界面</span></span><br><span class="line"><span class="meta">$</span><span class="bash">nh kex passwd     配置KeX密码（仅在第一次使用图形界面前使用）</span></span><br><span class="line"><span class="meta">$</span><span class="bash">nh kex &amp;          建立Kali NetHunter图形界面普通用户会话</span></span><br><span class="line"><span class="meta">$</span><span class="bash">nh kex stop   停止Kali NetHunter图形界面普通用户会话（每次关闭后必须运行）</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 一般常用以下命令</span></span><br><span class="line"><span class="meta">$</span><span class="bash">nh -r              以普通用户启动Kali NetHunter命令行界面</span></span><br><span class="line"><span class="meta">$</span><span class="bash">nh -r kex passwd   配置KeX密码（仅在第一次使用Root用户图形界面前使用）</span></span><br><span class="line"><span class="meta">$</span><span class="bash">nh -r kex &amp;        建立Kali NetHunter图形界面Root用户会话</span></span><br><span class="line"><span class="meta">$</span><span class="bash">nh -r kex stop    停止Kali NetHunter图形界面Root用户会话（每次关闭后必须运行）</span></span><br><span class="line"><span class="meta">$</span><span class="bash">nh -r kex <span class="built_in">kill</span>     关闭所有KeX会话</span></span><br></pre></td></tr></table></figure><h3 id="使用图形化界面"><a href="#使用图形化界面" class="headerlink" title="使用图形化界面"></a>使用图形化界面</h3><p>不知道如何使用图像化界面？首先，执行：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">nh -r kex passwd</span></span><br><span class="line">password:      #创建Kex密码，这里输入的密码是不显示的</span><br><span class="line">Verify:        #再次确认Kex密码，这里也不会显示</span><br></pre></td></tr></table></figure><p>如果出现 “ $ ” 表示创建成功，其他情况都说明两次输入密码不一致。然后使用以下命令开启图形界面会话。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> nh -r kex &amp;</span></span><br></pre></td></tr></table></figure><p>出现下图表示开启成功，可以进行下一步操作。</p><p><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/6.jpg" alt="6"></p><p>接下来打开<strong>NetHunter KeX</strong>，然后像下图设置，然后点击右上角<strong>Connect</strong>即可进入图形界面。</p><p><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/5.jpg" alt="5"></p><h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><p>如果需要Kali默认的工具的话需要确保手机剩余16GB空间，然后在图形界面下打开终端，如图，然后点击右边的键盘标志打开键盘执行如下命令：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">root@localhost:~# sudo apt update &amp;&amp; sudo apt full-upgrade</span><br><span class="line">... #停住就输入y，后面再停住就回车，等待完成</span><br><span class="line">root@localhost:~# sudo apt install kali-linux-default</span><br><span class="line">... #停住就输入y，后面再停住就回车，等待完成</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/7.jpg" alt="7"></p><p><strong>安装到此如果还有什么问题QQ联系：1637566997</strong></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Android </tag>
+            
+            <tag> Kali </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>微信QQ定时发消息</title>
+      <link href="/2020/02/22/page5/"/>
+      <url>/2020/02/22/page5/</url>
+      
+        <content type="html"><![CDATA[<h1 id="为何出此脚本"><a href="#为何出此脚本" class="headerlink" title="为何出此脚本"></a>为何出此脚本</h1><p>由于疫情我们不能去学校上学，所以流行起了网课，我们班就是每天QQ群里签到，然后共享位置，在群里上课，但是要完成签到和共享位置必须得很早起床，对于我这种不想起床的人来说这是非常痛苦的，遇巧的是正好我在之前学习了lua语言和新兴的辅助软件“节点精灵”，所以为了不起这么早，就写了此脚本，任何人可用。</p><a id="more"></a><h1 id="运行并配置辅助软件"><a href="#运行并配置辅助软件" class="headerlink" title="运行并配置辅助软件"></a>运行并配置辅助软件</h1><p>要使脚本起作用需要下载<a href="https://share.weiyun.com/5kO8YBc" target="_blank" rel="noopener">节点精灵</a>，下载好后打开会提示你开启无障碍服务，点击前往开启，然后跳转到无障碍设置，点击节点精灵，然后点击那个滑块，提示是否启用点确定。<br><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/02/22/page5/1.jpg" alt=""></p><h1 id="下载并运行脚本"><a href="#下载并运行脚本" class="headerlink" title="下载并运行脚本"></a>下载并运行脚本</h1><p>配置好后，进入节点精灵主界面，这里我已经把脚本上传到了官方，所以直接点击主界面的QQ，然后会看到2个脚本，后面那个就是我上传的脚本，可以直接下载，下载好后直接点击运行即可，运行后按照图4样板填写即可，如果要关闭的话，直接点击悬浮窗的红色停止按钮即可，另外如果共享人数没有达到指定人数就会每隔五分钟持续打开共享的。<br><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/02/22/page5/2.jpg" alt=""></p><h1 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h1><p>此脚本还有隐藏功能，对于早上签到如果没有发现老师或者同学签到是不会签到的，只有当老师或者同学发送了签到才发送签到，这个功能只能用于QQ。此脚本不仅限于签到，像一些需要在某个时间发消息，但是在那个时间没有闲手，那么就可以用到这个脚本，这就是这个脚本的作用。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Android </tag>
+            
+            <tag> Lua </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>安卓系统下使用SSR科学上网</title>
+      <link href="/2020/01/29/page4/"/>
+      <url>/2020/01/29/page4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="安卓端使用稳定且安全的SSR"><a href="#安卓端使用稳定且安全的SSR" class="headerlink" title="安卓端使用稳定且安全的SSR"></a>安卓端使用稳定且安全的SSR</h1><p>对于现在的情况来说，全球的PC(电脑)端使用量在逐渐低于移动端，甚至有些家里根本没配有电脑，导致很多人都问我怎么翻墙，我直接推荐了我的<a href="https://darkabyss.top/2019/07/30/page1/"%3Ehttps://darkabyss.top/2019/07/30/page1">上一篇翻墙教程</a>，然后有些就说怎么没有手机版的教程，所以我把手机版的教程Tell you，但对于IOS端我无能为力。</p><a id="more"></a><h1 id="安装SSR手机客户端"><a href="#安装SSR手机客户端" class="headerlink" title="安装SSR手机客户端"></a>安装SSR手机客户端</h1><p>手机版的SSR点此<a href="https://wws.lanzous.com/iFMb4e1sgti" target="_blank" rel="noopener">链接</a>进行下载，手机怎么安装软件不用说吧，安装好后桌面会出现一个小飞机的图标，然后点击进入SSR主界面👇。</p><p><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/01/29/page4/1.png" alt=""></p><h1 id="配置SSR并Run"><a href="#配置SSR并Run" class="headerlink" title="配置SSR并Run"></a>配置SSR并Run</h1><h2 id="获取订阅链接"><a href="#获取订阅链接" class="headerlink" title="获取订阅链接"></a>获取订阅链接</h2><p>安装好SSR手机端是不能直接使用的，虽然它有个默认配置，但是并不能翻墙，需要配置节点(这种方式不推荐，因为可用节点不好找，且一般不太稳定)或者添加订阅链接，如何获取订阅链接看我<a href="https://darkabyss.top/2019/07/30/page1/">上一个翻墙教程第3.1步查看“配置及使用SSR”</a>，手机端获取方式大同小异👇。</p><p><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/01/29/page4/2.png" alt=""></p><p>将链接复制下来过后打开SSR主界面，点击左上方的<strong>shadowsocksR</strong>，点击进去会有一个默认节点，这个是不能用的，我们把它划掉，然后点击右下方的“+”然后选择<strong>添加/升级SSR订阅</strong>，把<strong>自动更新</strong>选上，然后点击<strong>添加订阅地址</strong>，将刚刚复制的链接粘粘在输入框内，<strong>注意不要有空格，否者可能会使订阅失效</strong>，然后点击<strong>确定</strong>，再点击<strong>确定并升级</strong>，下图有操作👇，等待一会，配置页面会出现几个节点，到这说明你已经配置好订阅链接了，现在可以进行下一步操作了。</p><p><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/01/29/page4/2.gif" alt=""></p><h2 id="运行SSR"><a href="#运行SSR" class="headerlink" title="运行SSR"></a>运行SSR</h2><p>现在我们点击带有<strong>国家</strong>或者像<strong>HK</strong>和<strong>SG</strong>这种字样的节点，别点带有说明的几点，别点像下面图1那种节点，那种是不可用的，然后随机点一个节点，然后点击纸飞机图标，这时会出现一个类似于钥匙图标的请求，我们点确定，等待一会，会出现<strong>检查网络连接</strong>字样，我们点击它如果显示了<strong>连接有效</strong>，说明此节点可以使用，如果没有出现<strong>连接有效</strong>，并且系统提示无法使用互联网，这时就需要更换节点。连接好后就可以尽情享受google，youtueb(俗称油管)，P站🔞……等等。</p><p><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/01/29/page4/3.png" alt=""></p><h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><p>想要更多节点，我整合了一些网站，<a href="https://darkabyss.top/dlc/ssr.html">点这里</a>可以得到一些资源，下图是使用SSR翻墙访问手机端youtube(油管)的截图。</p><p><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/01/29/page4/4.jpg" alt=""></p>]]></content>
+      
+      
       <categories>
-        <category>安卓</category>
+          
+          <category> 安卓 </category>
+          
       </categories>
-      <tags>
-        <tag>科学上网</tag>
-        <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[win10应用商店打不开除根源的解决办法]]></title>
-    <url>%2F2019%2F08%2F18%2Fpage3%2F</url>
-    <content type="text"><![CDATA[win10应用商店不能联网的情况我每次安装一个新系统都会遇到win10应用商店打不开的情况，然后基本上就没管，但是这次为了下载一个东西，我得需要win10应用商店，但是总是连接不上用VPN也无法进入，这让我很烦恼，网上大部分的方法都不管用，点了刷新都是下图的情况，出现错误代码0x80131500。 出现错误代码0x80131500解决方法后面在一个博客看到的一个方法还挺管用，而且方便，具体方法是按win键+R键打开运行窗口然后在输入框里面输入inetcpl.cpl，然后回车点击高级将带有TLS的选项全部勾上，然后点击应用-&gt;确定，然后就可以打开应用商店了。 如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪]]></content>
+      
+      
+        <tags>
+            
+            <tag> 科学上网 </tag>
+            
+            <tag> Android </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>win10应用商店打不开除根源的解决办法</title>
+      <link href="/2019/08/18/page3/"/>
+      <url>/2019/08/18/page3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="win10应用商店不能联网的情况"><a href="#win10应用商店不能联网的情况" class="headerlink" title="win10应用商店不能联网的情况"></a>win10应用商店不能联网的情况</h1><p>我每次安装一个新系统都会遇到win10应用商店打不开的情况，然后基本上就没管，但是这次为了下载一个东西，我得需要win10应用商店，但是总是连接不上用VPN也无法进入，这让我很烦恼，网上大部分的方法都不管用，点了刷新都是下图的情况，出现错误代码0x80131500。</p><a id="more"></a><p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566135594370&di=28e31614184d3a77469565cb80f83f8b&imgtype=0&src=http%3A%2F%2Fwww.leoruby.net%2Fmyblogimages%2F00537.JPG" alt=""></p><h1 id="出现错误代码0x80131500解决方法"><a href="#出现错误代码0x80131500解决方法" class="headerlink" title="出现错误代码0x80131500解决方法"></a>出现错误代码0x80131500解决方法</h1><p>后面在一个博客看到的一个方法还挺管用，而且方便，具体方法是按<strong>win键+R键</strong>打开运行窗口然后在输入框里面输入<strong>inetcpl.cpl</strong>，然后回车点击高级将带有TLS的选项全部勾上，然后点击应用-&gt;确定，然后就可以打开应用商店了。</p><p><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2019/08/18/page3/1.jpg" alt=""></p><h1 id="如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪"><a href="#如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪" class="headerlink" title="如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪"></a>如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪</h1>]]></content>
+      
+      
       <categories>
-        <category>Windows</category>
+          
+          <category> Windows </category>
+          
       </categories>
-      <tags>
-        <tag>Windows</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Windows下SSR机场订阅使用教程]]></title>
-    <url>%2F2019%2F07%2F30%2Fpage1%2F</url>
-    <content type="text"><![CDATA[免费，稳定且安全的科学上网方式科学上网方式有很多种：1.运用VPN软件，2.搭建VPS，3.白嫖“机场”使用SSR，4.V2Ray。前两种方式都很好，但是购买一个VPN软件和搭建VPS服务器是需要很大一笔钱，而且VPN软件有很多不稳定，虽然也有免费的VPN软件，但是只能备用，速度很慢，而且安全性不能保证，所以我推荐使用第三种方式，关于第四种其实跟SSR差不多，可以自行了解。（建议看完一遍本教程再操作） 安装及运行SSRSSR Windows版的下载链接下载完之后是一个压缩包，然后在任意一个地方新建一个名为SSR的文件夹，并且把下载好的SSR压缩包解压在SSR文件夹里面，然后双击4.0的exe应用程序,会发现后台已经出现了一个小飞机,现在是无法使用，先右击小飞机，然后选择系统代理模式-&gt;直连模式。 配置及使用SSR复制订阅链接以进行下一步操作目前我这里有一个一直在用的免费高速且稳定的“机场”：https://suying999.net/auth/register?code=UyDP 打开之后点击开始使用注册，然后注册一个账号（要记住账号和密码），注册好之后再次登录会进入用户主界面，然后点击右方的签到领流量处进行签到并领取一些流量（尽量每天都签到，因为超过长时间未签到会自动销毁账号，而且4GB流量很快就会用完，网页下方会看见流量使用情况）。现在看到页面左方的订阅地址，这个链接就是我们需要的东西，点击高端口的那个拷贝地址，会自动复制下来，然后可以将这个网站收藏起来。 配置SSR现在右击小飞机选择服务器订阅-&gt;SSR服务器订阅设置，它会打开一个窗口，将自动更新勾上这样每次打开SSR都会自动更新节点信息，之后点击Add按钮，然后网址右边的输入框按下Ctrl+A（全选）再按下Ctrl+V（粘粘）将刚刚复制的订阅链接粘粘在此，这样就完成了SSR的配置，然后点击确定即可。 使用SSR完成了上述操作之后我们右击小飞机点击服务器订阅-&gt;更新服务器订阅（不通过代理），等待一会会出现一个“SSR服务器订阅更新成功”的提示。然后左击小飞机会出现一个弹窗，在左边的状态栏可以看到应该有多个节点，我们选中有“地名”的节点（一般订阅服务器之后只有除账号还有信息以外的节点才是可以使用的），然后点击确定。再次右击小飞机选择系统代理模式-&gt;全局模式，此模式代表可以为电脑上的所有软件和网站进行代理（科学上网），在访问国内网站会有延迟，PAC模式是绕过代理国内网站，直连模式就是禁用代理。现在就可以使用SSR打开Google,YouTube,Facebook,Pornhub咳咳…这些国外的网站了。 扩展如果你想快速打开SSR，可以右击SSR应用程序，点击固定到任务栏，然后就可以直接在需要的时候将鼠标迅速移动到SSR那个小飞机图标一点就可以做你想干的事情了🤭，另外我整合的一些可用“机场链接”（持续更新），还有一个非常强大的网站：https://doubibackup.com/ （逗比根据地，需要科学上网）这里包含很多科学上网的工具和教程。]]></content>
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Windows下SSR机场订阅使用教程</title>
+      <link href="/2019/07/30/page1/"/>
+      <url>/2019/07/30/page1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="免费，稳定且安全的科学上网方式"><a href="#免费，稳定且安全的科学上网方式" class="headerlink" title="免费，稳定且安全的科学上网方式"></a>免费，稳定且安全的科学上网方式</h1><p>科学上网方式有很多种：1.运用VPN软件，2.搭建VPS，3.白嫖“机场”使用SSR，4.V2Ray。前两种方式都很好，但是购买一个VPN软件和搭建VPS服务器是需要很大一笔钱，而且VPN软件有很多不稳定，虽然也有免费的VPN软件，但是只能备用，速度很慢，而且安全性不能保证，所以我推荐使用第三种方式，关于第四种其实跟SSR差不多，可以自行了解。（建议看完一遍本教程再操作）</p><a id="more"></a><h1 id="安装及运行SSR"><a href="#安装及运行SSR" class="headerlink" title="安装及运行SSR"></a>安装及运行SSR</h1><p><a href="https://wws.lanzous.com/iKDM9e1slod" target="_blank" rel="noopener">SSR Windows版的下载链接</a>下载完之后是一个压缩包，然后在任意一个地方新建一个名为SSR的文件夹，并且把下载好的SSR压缩包解压在SSR文件夹里面，然后双击4.0的exe应用程序,会发现后台已经出现了一个小飞机,现在是无法使用，先右击小飞机，然后选择系统代理模式-&gt;直连模式。<br><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2019/07/30/page1/4.jpg" alt=""></p><h1 id="配置及使用SSR"><a href="#配置及使用SSR" class="headerlink" title="配置及使用SSR"></a>配置及使用SSR</h1><h2 id="复制订阅链接以进行下一步操作"><a href="#复制订阅链接以进行下一步操作" class="headerlink" title="复制订阅链接以进行下一步操作"></a>复制订阅链接以进行下一步操作</h2><p>目前我这里有一个一直在用的免费高速且稳定的“机场”：<a href="https://suying999.net/auth/register?code=UyDP" target="_blank" rel="noopener">https://suying999.net/auth/register?code=UyDP</a> 打开之后点击开始使用注册，然后注册一个账号（要记住账号和密码），注册好之后再次登录会进入用户主界面，然后点击右方的签到领流量处进行签到并领取一些流量（尽量每天都签到，因为超过长时间未签到会自动销毁账号，而且4GB流量很快就会用完，网页下方会看见流量使用情况）。现在看到页面左方的订阅地址，这个链接就是我们需要的东西，点击高端口的那个拷贝地址，会自动复制下来，然后可以将这个网站收藏起来。<br><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2019/07/30/page1/000.jpg" alt=""></p><h2 id="配置SSR"><a href="#配置SSR" class="headerlink" title="配置SSR"></a>配置SSR</h2><p>现在右击小飞机选择服务器订阅-&gt;SSR服务器订阅设置，它会打开一个窗口，将自动更新勾上这样每次打开SSR都会自动更新节点信息，之后点击Add按钮，然后网址右边的输入框按下Ctrl+A（全选）再按下Ctrl+V（粘粘）将刚刚复制的订阅链接粘粘在此，这样就完成了SSR的配置，然后点击确定即可。<br><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2019/07/30/page1/0.png" alt=""></p><h2 id="使用SSR"><a href="#使用SSR" class="headerlink" title="使用SSR"></a>使用SSR</h2><p>完成了上述操作之后我们右击小飞机点击服务器订阅-&gt;更新服务器订阅（不通过代理），等待一会会出现一个“SSR服务器订阅更新成功”的提示。<br><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2019/07/30/page1/13.png" alt=""><br>然后左击小飞机会出现一个弹窗，在左边的状态栏可以看到应该有多个节点，我们选中有“地名”的节点（一般订阅服务器之后只有除账号还有信息以外的节点才是可以使用的），然后点击确定。<br><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2019/07/30/page1/12.png" alt=""><br>再次右击小飞机选择系统代理模式-&gt;全局模式，此模式代表可以为电脑上的所有软件和网站进行代理（科学上网），在访问国内网站会有延迟，PAC模式是绕过代理国内网站，直连模式就是禁用代理。现在就可以使用SSR打开Google,YouTube,Facebook,Pornhub咳咳…这些国外的网站了。<br><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2019/07/30/page1/15.png" alt=""></p><h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><p>如果你想快速打开SSR，可以右击SSR应用程序，点击固定到任务栏，然后就可以直接在需要的时候将鼠标迅速移动到SSR那个小飞机图标一点就可以做你想干的事情了🤭，另外我整合的一些可用<a href="/dlc/ssr.html">“机场链接”</a>（持续更新），还有一个非常强大的网站：<a href="https://doubibackup.com/" target="_blank" rel="noopener">https://doubibackup.com/</a> （逗比根据地，需要科学上网）这里包含很多科学上网的工具和教程。<br><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2019/07/30/page1/17.jpg" alt=""></p>]]></content>
+      
+      
       <categories>
-        <category>科学上网</category>
+          
+          <category> 科学上网 </category>
+          
       </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>科学上网</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[微软系统图片隐写]]></title>
-    <url>%2F2019%2F07%2F15%2Fpage0%2F</url>
-    <content type="text"><![CDATA[Windows系统下的图片隐写术图片隐写术涉及密码学且有很多种，这里教大家两种比较简单且常用的。 运用CMD命令行将压缩文件写入首先在同一个目录里面准备一个图片(.JPEG/.JPG/.PNG/.GIF…)和一个文本或者文件，将你需要传达的信息写入.txt文本，然后将写好的文本或者文件/文件夹利压缩工具进行压缩，压缩后文件的扩展名应为.rar或.zip，然后利用以下👇命令进行隐写。 123Microsoft Windows [版本 xxx](c) 2019 Microsoft Corporation。保留所有权利。C:\Users\Administrator&gt;copy /b xxx.png + xxx.rar xxx.png 如何破解这个呢，直接把已经隐写的图片的扩展名改为.rar或者.zip即可，现在可以试试整个过程. 将信息写入属性右击一个图片点击属性然后点击详细信息，填写备注就OK，如何查看就不用说了。 如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪]]></content>
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+            <tag> 科学上网 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>微软系统图片隐写</title>
+      <link href="/2019/07/15/page0/"/>
+      <url>/2019/07/15/page0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Windows系统下的图片隐写术"><a href="#Windows系统下的图片隐写术" class="headerlink" title="Windows系统下的图片隐写术"></a>Windows系统下的图片隐写术</h1><p>图片隐写术涉及密码学且有很多种，这里教大家两种比较简单且常用的。</p><a id="more"></a><h1 id="运用CMD命令行将压缩文件写入"><a href="#运用CMD命令行将压缩文件写入" class="headerlink" title="运用CMD命令行将压缩文件写入"></a>运用CMD命令行将压缩文件写入</h1><p>首先在同一个目录里面准备一个图片(.JPEG/.JPG/.PNG/.GIF…)和一个文本或者文件，将你需要传达的信息写入.txt文本，然后将写好的文本或者文件/文件夹利压缩工具进行压缩，压缩后文件的扩展名应为.rar或.zip，然后利用以下👇命令进行隐写。</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Microsoft Windows [版本 <span class="type">xxx</span>]</span><br><span class="line">(c) <span class="number">2019</span> Microsoft Corporation。保留所有权利。</span><br><span class="line">C:\Users\Administrator&gt;copy /b xxx.png + xxx.rar xxx.png</span><br></pre></td></tr></table></figure><p>如何破解这个呢，直接把已经隐写的图片的扩展名改为.rar或者.zip即可，现在可以试试整个过程.</p><h1 id="将信息写入属性"><a href="#将信息写入属性" class="headerlink" title="将信息写入属性"></a>将信息写入属性</h1><p>右击一个图片点击属性然后点击详细信息，填写备注就OK，如何查看就不用说了。</p><p><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2019/07/15/page0/img/1.jpg" alt="隐写"></p><h1 id="如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪"><a href="#如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪" class="headerlink" title="如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪"></a>如果此教程对你有帮助可以将本站进行收藏分享以及进行下方的打赏🤪</h1>]]></content>
+      
+      
       <categories>
-        <category>Windows</category>
+          
+          <category> Windows </category>
+          
       </categories>
-      <tags>
-        <tag>Windows</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
