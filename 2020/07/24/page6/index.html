@@ -15,19 +15,20 @@
 <meta property="og:url" content="http://darkabyss.top/2020/07/24/page6/index.html">
 <meta property="og:site_name" content="DarK-Abyss">
 <meta property="og:description" content="1.下载所需软件说明：安卓版本小于安卓5.0无法正常运行，安装完成后理论上可以运行所有Kali工具，Kali NetHunter是amr64内核。 termux （必须） NetHunter Kex （必须） PandVPN （有VPN可以无视） 2.配置Termux更新和安装工具首先在开始之前先打开PandVPN或者其他可以翻墙的工具都可以，第一次打开PandVPN需要等一会，然后进入主界面后如">
-<meta property="og:image" content="http://darkabyss.top/2020/07/24/page6/2.jpg">
-<meta property="og:image" content="http://darkabyss.top/2020/07/24/page6/1.jpg">
-<meta property="og:image" content="c:%5CUsers%5CAdministrator%5CDownloads%5C3.jpg">
-<meta property="og:image" content="http://darkabyss.top/2020/07/24/page6/4.jpg">
-<meta property="og:image" content="http://darkabyss.top/2020/07/24/page6/6.jpg">
-<meta property="og:image" content="http://darkabyss.top/2020/07/24/page6/7.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/1.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/3.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/4.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/6.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/5.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/7.jpg">
 <meta property="article:published_time" content="2020-07-24T05:44:49.000Z">
-<meta property="article:modified_time" content="2020-07-24T05:50:37.140Z">
+<meta property="article:modified_time" content="2020-07-24T05:58:14.092Z">
 <meta property="article:author" content="04rk46y5s">
 <meta property="article:tag" content="Android">
 <meta property="article:tag" content="Kali">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://darkabyss.top/2020/07/24/page6/2.jpg">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/2.jpg">
   
     <link rel="alternative" href="/atom.xml" title="DarK-Abyss" type="application/atom+xml">
   
@@ -210,10 +211,10 @@
 <p><a href="https://wws.lanzous.com/ik4jJexj2ng" target="_blank" rel="noopener">NetHunter Kex</a> （必须）</p>
 <p><a href="https://wws.lanzous.com/iTTTuexj7mf" target="_blank" rel="noopener">PandVPN</a> （有VPN可以无视）</p>
 <h2 id="2-配置Termux"><a href="#2-配置Termux" class="headerlink" title="2.配置Termux"></a>2.配置Termux</h2><h3 id="更新和安装工具"><a href="#更新和安装工具" class="headerlink" title="更新和安装工具"></a>更新和安装工具</h3><p>首先在开始之前先打开PandVPN或者其他可以翻墙的工具都可以，第一次打开PandVPN需要等一会，然后进入主界面后如图，向上滑动那个滑块就行，第一次开启可能会提示你是否启用VPN标识，直接点确实即可。</p>
-<img src="2.jpg" alt="2" style="zoom: 25%;" />
+<img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/2.jpg" alt="2" style="zoom: 25%;" />
 
 <p>第一次启动Termux的时候需要从远程服务器加载数据，可能会比较慢，耐心等待一会就行，然后出现如下界面就行，如果出现其他提示就关闭Termux用运营商网络试试。</p>
-<p><img src="1.jpg" alt="1"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/1.jpg" alt="1"></p>
 <p>然后执行以下命令来更新Termux软件库，如果中途停住按回车就行，然后等待一会直到出现 “ $ ” 表示更新完成</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> apt update &amp;&amp; apt upgrade -y</span></span><br></pre></td></tr></table></figure>
 
@@ -236,7 +237,7 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 可以自定义按键</span></span><br><span class="line">extra-keys = [ \</span><br><span class="line"> [<span class="string">'ESC'</span>,<span class="string">'-'</span>,<span class="string">'/'</span>,<span class="string">'HOME'</span>,<span class="string">'UP'</span>,<span class="string">'END'</span>,<span class="string">'PGUP'</span>,<span class="string">'DEL'</span>], \</span><br><span class="line"> [<span class="string">'TAB'</span>,<span class="string">'CTRL'</span>,<span class="string">'ALT'</span>,<span class="string">'LEFT'</span>,<span class="string">'DOWN'</span>,<span class="string">'RIGHT'</span>,<span class="string">'PGDN'</span>,<span class="string">'BKSP'</span>] \</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 
 <p>修改后保存，如何重启Termux即可生效，如图：</p>
-<p><img src="C:%5CUsers%5CAdministrator%5CDownloads%5C3.jpg" alt="3"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/3.jpg" alt="3"></p>
 <h2 id="3-开始安装Kali-NetHunter"><a href="#3-开始安装Kali-NetHunter" class="headerlink" title="3.开始安装Kali NetHunter"></a>3.开始安装Kali NetHunter</h2><p>下载Kali NetHunter镜像：<a href="https://drive.google.com/file/d/13BjoGirO0xONNeJ2FO0PcH8HV-3McrbD/view?usp=sharing" target="_blank" rel="noopener">点我</a></p>
 <p>下载好后应该在手机下载目录下面，然后执行以下命令从下载目录移动镜像到Termux目录：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv storage/downloads/kalifs-arm64-full.tar.xz ~/</span></span><br></pre></td></tr></table></figure>
@@ -246,7 +247,7 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ wget -O install-nethunter-termux https://offs.ec/2MceZWr</span><br><span class="line">$ chmod +x install-nethunter-termux</span><br><span class="line">$ ./install-nethunter-termux</span><br></pre></td></tr></table></figure>
 
 <p>执行后可能会停住提示你:<strong>检测到镜像已存在是否删除重新下载[y/n]</strong> 这里输入n回车即可，然后它会解压镜像，这个过程可能10-20分钟，请耐心等待，出现如下界面说明Kali已经安装成功了。</p>
-<p><img src="4.jpg" alt="4"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/4.jpg" alt="4"></p>
 <h2 id="4-使用Kali-NetHunter"><a href="#4-使用Kali-NetHunter" class="headerlink" title="4.使用Kali NetHunter"></a>4.使用Kali NetHunter</h2><h3 id="Kali-NetHunter启动前命令"><a href="#Kali-NetHunter启动前命令" class="headerlink" title="Kali NetHunter启动前命令"></a>Kali NetHunter启动前命令</h3><p><strong>注意：</strong>在使用Kali之前可以把PandVPN关了，以免影响网速。</p>
 <p>在Termux执行以下命令之一：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">命令                  功能     </span><br><span class="line"><span class="meta">$</span><span class="bash">nh                以普通用户启动Kali NetHunter命令行界面</span></span><br><span class="line"><span class="meta">$</span><span class="bash">nh kex passwd     配置KeX密码（仅在第一次使用图形界面前使用）</span></span><br><span class="line"><span class="meta">$</span><span class="bash">nh kex &amp;          建立Kali NetHunter图形界面普通用户会话</span></span><br><span class="line"><span class="meta">$</span><span class="bash">nh kex stop	   停止Kali NetHunter图形界面普通用户会话（每次关闭后必须运行）</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 一般常用以下命令</span></span><br><span class="line"><span class="meta">$</span><span class="bash">nh -r              以普通用户启动Kali NetHunter命令行界面</span></span><br><span class="line"><span class="meta">$</span><span class="bash">nh -r kex passwd   配置KeX密码（仅在第一次使用Root用户图形界面前使用）</span></span><br><span class="line"><span class="meta">$</span><span class="bash">nh -r kex &amp;        建立Kali NetHunter图形界面Root用户会话</span></span><br><span class="line"><span class="meta">$</span><span class="bash">nh -r kex stop	    停止Kali NetHunter图形界面Root用户会话（每次关闭后必须运行）</span></span><br><span class="line"><span class="meta">$</span><span class="bash">nh -r kex <span class="built_in">kill</span>     关闭所有KeX会话</span></span><br></pre></td></tr></table></figure>
@@ -258,12 +259,13 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> nh -r kex &amp;</span></span><br></pre></td></tr></table></figure>
 
 <p>出现下图表示开启成功，可以进行下一步操作。</p>
-<p><img src="6.jpg" alt="6"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/6.jpg" alt="6"></p>
 <p>接下来打开<strong>NetHunter KeX</strong>，然后像下图设置，然后点击右上角<strong>Connect</strong>即可进入图形界面。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/5.jpg" alt="5"></p>
 <h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><p>如果需要Kali默认的工具的话需要确保手机剩余16GB空间，然后在图形界面下打开终端，如图，然后点击右边的键盘标志打开键盘执行如下命令：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">root@localhost:~# sudo apt update &amp;&amp; sudo apt full-upgrade</span><br><span class="line">... #停住就输入y，后面再停住就回车，等待完成</span><br><span class="line">root@localhost:~# sudo apt install kali-linux-default</span><br><span class="line">... #停住就输入y，后面再停住就回车，等待完成</span><br></pre></td></tr></table></figure>
 
-<p><img src="7.jpg" alt="7"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/7.jpg" alt="7"></p>
 <p><strong>安装到此如果还有什么问题QQ联系：1637566997</strong></p>
 
       
