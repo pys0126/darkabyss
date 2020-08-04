@@ -24,7 +24,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/5.jpg">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/7.jpg">
 <meta property="article:published_time" content="2020-07-24T05:44:49.000Z">
-<meta property="article:modified_time" content="2020-08-04T07:26:28.202Z">
+<meta property="article:modified_time" content="2020-08-04T14:15:12.266Z">
 <meta property="article:author" content="04rk46y5s">
 <meta property="article:tag" content="Android">
 <meta property="article:tag" content="Kali">
@@ -210,7 +210,6 @@
         <h1 id="1-下载所需软件"><a href="#1-下载所需软件" class="headerlink" title="1.下载所需软件"></a>1.下载所需软件</h1><p><strong>说明</strong> ：安卓版本小于安卓5.0无法正常运行，安装完成后理论上可以运行所有Kali工具，Kali NetHunter是amr64内核。 </p>
 <a id="more"></a>
 <p><a href="https://wws.lanzous.com/iVJzzf7j24h" target="_blank" rel="noopener"><strong>PDF离线教程</strong> </a></p>
-<p><a href="https://darkabyss.top/2020/07/24/page6/"><strong>网页教程</strong> </a></p>
 <p><a href="https://wws.lanzous.com/iUpQXexj2ha" target="_blank" rel="noopener">termux</a>（必须） </p>
 <p><a href="https://wws.lanzous.com/ik4jJexj2ng" target="_blank" rel="noopener">NetHunter Kex</a>（必须） </p>
 <p><a href="https://wws.lanzous.com/inrjNexth2f" target="_blank" rel="noopener">PandVPN</a>（有VPN可以无视） </p>
@@ -234,7 +233,13 @@
 <h1 id="3-开始安装Kali-NetHunter"><a href="#3-开始安装Kali-NetHunter" class="headerlink" title="3.开始安装Kali NetHunter"></a>3.开始安装Kali NetHunter</h1><p>下载Kali NetHunter镜像：<br><strong>谷歌网盘：</strong> <a href="https://drive.google.com/uc?id=13BjoGirO0xONNeJ2FO0PcH8HV-3McrbD&amp;export=download" target="_blank" rel="noopener">https://drive.google.com/uc?id=13BjoGirO0xONNeJ2FO0PcH8HV-3McrbD&amp;export=download</a><br><strong>百度网盘：</strong> <a href="https://pan.baidu.com/s/1ew2dny6xX5x26f9wSZY6uQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1ew2dny6xX5x26f9wSZY6uQ</a>  提取码：wyml </p>
 <p>如果用百度网盘下载需要设置默认下载目录为手机Download文件夹，如图：<br><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/baidu.jpg" alt="2" style="zoom:40%;" /><br>下载好后应该在手机下载目录下面，然后执行以下命令从下载目录移动镜像到Termux目录： </p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv storage/downloads/kalifs-arm64-full.tar.xz ~/</span></span><br></pre></td></tr></table></figure>
-<p>镜像文件有点大，移动过程会有点慢，请耐心等待出现 “ $ ” 即可。<br>获取并执行安装脚本： </p>
+<p>这里可能会出现下面错误：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv:cannot stat 'storage/downloads/kalifs-arm64-full.tar.xz': No such file or directory</span><br></pre></td></tr></table></figure>
+
+<p>如果出现这个错误，运行以下命令即可：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv storage/shared/downloads/kalifs-arm64-full.tar.xz ~/</span></span><br></pre></td></tr></table></figure>
+
+<p>*<em>注意：镜像文件有点大，移动过程会有点慢，请耐心等待出现 “ $ ” 即可。 *</em><br>获取并执行安装脚本： </p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> wget -O install-nethunter-termux https://offs.ec/2MceZWr </span></span><br><span class="line"><span class="meta">$</span><span class="bash"> chmod +x install-nethunter-termux </span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./install-nethunter-termux</span></span><br></pre></td></tr></table></figure>
 <p>执行后可能会停住提示你:<strong>检测到镜像已存在是否删除重新下载[y/n]</strong> 这里输入n回车即可，然后它会解压镜像，这个过程可能10-20分钟，请耐心等待，出现如下界面说明Kali已经安装成功了。<br><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/4.jpg" alt="图片"></p>
 <h1 id="4-使用Kali-NetHunter"><a href="#4-使用Kali-NetHunter" class="headerlink" title="4.使用Kali NetHunter"></a>4.使用Kali NetHunter</h1><h2 id="Kali-NetHunter启动前命令"><a href="#Kali-NetHunter启动前命令" class="headerlink" title="Kali NetHunter启动前命令"></a>Kali NetHunter启动前命令</h2><p><strong>注意：在使用Kali之前可以把PandVPN关了，以免影响网速。</strong> </p>
@@ -248,7 +253,8 @@
 <p>接下来打开 <strong>NetHunter KeX</strong> ，然后像下图设置，然后点击右上角 <strong>Connect</strong> 即可进入图形界面。 </p>
 <img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/5.jpg" alt="2" style="zoom:25%;" />
 
-<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><p>如果需要Kali默认的工具的话需要确保手机剩余16GB空间，然后在图形界面下打开终端，如图，然后点击右边的键盘标志打开键盘执行如下命令： </p>
+<h1 id="5-扩展"><a href="#5-扩展" class="headerlink" title="5.扩展"></a>5.扩展</h1><p>##操作<br>在图形界面下鼠标指针的操作为：滑动=移动鼠标；双击=鼠标左键；两指点击=鼠标右键</p>
+<p>##安装kali默认工具<br>如果需要Kali默认的工具的话需要确保手机剩余16GB空间，然后在<strong>图形界面(如下图)</strong>下打开终端，如图，然后点击右边的键盘标志打开键盘执行如下命令： </p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">root@localhost:~# sudo apt update &amp;&amp; sudo apt full-upgrade </span><br><span class="line">... #停住就输入y，后面再停住就回车，等待完成 </span><br><span class="line">root@localhost:~# sudo apt install kali-linux-default </span><br><span class="line">... #停住就输入y，后面再停住就回车，等待完成</span><br></pre></td></tr></table></figure>
 <img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/7.jpg" alt="2" style="zoom:70%;" />
 
@@ -400,7 +406,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-下载所需软件"><span class="toc-number">1.</span> <span class="toc-text">1.下载所需软件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-配置Termux"><span class="toc-number">2.</span> <span class="toc-text">2.配置Termux</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#更新和安装工具"><span class="toc-number">2.1.</span> <span class="toc-text">更新和安装工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#美化及创建内部存贮软目录"><span class="toc-number">2.2.</span> <span class="toc-text">美化及创建内部存贮软目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#定制常用按键（可选）"><span class="toc-number">2.3.</span> <span class="toc-text">定制常用按键（可选）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-开始安装Kali-NetHunter"><span class="toc-number">3.</span> <span class="toc-text">3.开始安装Kali NetHunter</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-使用Kali-NetHunter"><span class="toc-number">4.</span> <span class="toc-text">4.使用Kali NetHunter</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Kali-NetHunter启动前命令"><span class="toc-number">4.1.</span> <span class="toc-text">Kali NetHunter启动前命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用图形化界面"><span class="toc-number">4.2.</span> <span class="toc-text">使用图形化界面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#扩展"><span class="toc-number">4.3.</span> <span class="toc-text">扩展</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-下载所需软件"><span class="toc-number">1.</span> <span class="toc-text">1.下载所需软件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-配置Termux"><span class="toc-number">2.</span> <span class="toc-text">2.配置Termux</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#更新和安装工具"><span class="toc-number">2.1.</span> <span class="toc-text">更新和安装工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#美化及创建内部存贮软目录"><span class="toc-number">2.2.</span> <span class="toc-text">美化及创建内部存贮软目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#定制常用按键（可选）"><span class="toc-number">2.3.</span> <span class="toc-text">定制常用按键（可选）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-开始安装Kali-NetHunter"><span class="toc-number">3.</span> <span class="toc-text">3.开始安装Kali NetHunter</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-使用Kali-NetHunter"><span class="toc-number">4.</span> <span class="toc-text">4.使用Kali NetHunter</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Kali-NetHunter启动前命令"><span class="toc-number">4.1.</span> <span class="toc-text">Kali NetHunter启动前命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用图形化界面"><span class="toc-number">4.2.</span> <span class="toc-text">使用图形化界面</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-扩展"><span class="toc-number">5.</span> <span class="toc-text">5.扩展</span></a></li></ol>
                     </div>
                 </span>
             </div>
