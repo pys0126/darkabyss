@@ -24,7 +24,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/5.jpg">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/7.jpg">
 <meta property="article:published_time" content="2020-07-24T05:44:49.000Z">
-<meta property="article:modified_time" content="2020-08-18T03:55:48.984Z">
+<meta property="article:modified_time" content="2020-10-28T03:13:56.196Z">
 <meta property="article:author" content="04rk46y5s">
 <meta property="article:tag" content="Android">
 <meta property="article:tag" content="Kali">
@@ -211,7 +211,6 @@
 <p><a href="https://wws.lanzous.com/iVJzzf7j24h" target="_blank" rel="noopener"><strong>PDF离线教程</strong> </a></p>
 <p><a href="https://wws.lanzous.com/iUpQXexj2ha" target="_blank" rel="noopener">termux</a>（必须） </p>
 <p><a href="https://wws.lanzous.com/ik4jJexj2ng" target="_blank" rel="noopener">NetHunter Kex</a>（必须） </p>
-<p><a href="https://darkabyss.top/dlc/VPN.apk">老王VPN</a>（没有VPN必须下载） </p>
 <h1 id="2-配置Termux"><a href="#2-配置Termux" class="headerlink" title="2.配置Termux"></a>2.配置Termux</h1><h2 id="更新和安装工具"><a href="#更新和安装工具" class="headerlink" title="更新和安装工具"></a>更新和安装工具</h2><p>首先在开始之前先打开老王VPN或者其他可以翻墙的工具都可以，第一次打开老王VPN需要等一会，然后进入主界面后如图，点击连线即可，第一次开启可能会提示你是否启用VPN标识，直接点确实即可。<br><img src="2.jpg" alt="2" style="zoom:50%;" /><br>第一次启动Termux的时候需要从远程服务器加载数据，可能会比较慢，耐心等待一会就行，然后出现如下界面就行，如果出现其他提示就关闭Termux用运营商网络试试。 </p>
 <p><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/1.jpg" alt="图片"></p>
 <p>然后执行以下命令来更新Termux软件库，如果中途停住按回车就行，然后等待一会直到出现 “ $ ” 表示更新完成 </p>
@@ -239,7 +238,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv storage/shared/download/我的资源/Linux/kalifs-arm64-full.tar.xz ~/</span></span><br></pre></td></tr></table></figure>
 
 <p>*<em>注意：镜像文件有点大，移动过程会有点慢，请耐心等待出现 “ $ ” 即可。 *</em><br>获取并执行安装脚本： </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> wget -O install-nethunter-termux https://offs.ec/2MceZWr </span></span><br><span class="line"><span class="meta">$</span><span class="bash"> chmod +x install-nethunter-termux </span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./install-nethunter-termux</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> wget -O install-nethunter-termux https://darkabyss.top/dlc/install-nethunter-termux</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> chmod +x install-nethunter-termux </span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./install-nethunter-termux</span></span><br></pre></td></tr></table></figure>
 <p>执行后可能会停住提示你:<code>[?] Existing image file found. Delete and download a new one? [y/N]</code>这里输入n回车即可，然后它会解压镜像，这个过程可能10-20分钟，请耐心等待，出现如下界面说明Kali已经安装成功了。<br><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/4.jpg" alt="图片"></p>
 <h1 id="4-使用Kali-NetHunter"><a href="#4-使用Kali-NetHunter" class="headerlink" title="4.使用Kali NetHunter"></a>4.使用Kali NetHunter</h1><h2 id="Kali-NetHunter启动前命令"><a href="#Kali-NetHunter启动前命令" class="headerlink" title="Kali NetHunter启动前命令"></a>Kali NetHunter启动前命令</h2><p><strong>注意：在使用Kali之前可以把老王VPN关了，以免影响网速。</strong> </p>
 <p>在Termux执行以下命令之一： </p>
