@@ -24,7 +24,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/5.jpg">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/7.jpg">
 <meta property="article:published_time" content="2020-07-24T05:44:49.000Z">
-<meta property="article:modified_time" content="2020-10-28T08:58:22.773Z">
+<meta property="article:modified_time" content="2020-11-26T06:41:47.959Z">
 <meta property="article:author" content="04rk46y5s">
 <meta property="article:tag" content="Android">
 <meta property="article:tag" content="Kali">
@@ -56,6 +56,7 @@
       
 <div class="overlay" style="background: url('https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/img/bj.jpg')"></div>
 <div class="intrude-less">
+	
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			<img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/img/avatar.jpg" class="js-avatar">
@@ -74,8 +75,15 @@
 	        
 				<li><a href="/archives/">归档</a></li>
 	        
+				<li><a href="/dlc/ssr.html">ssr分享</a></li>
+	        
+				<li><a href="/dlc/jsq.html">免费加速器</a></li>
+	        
+				<li><a href="/dlc/web/notitle.html">炫酷的网页</a></li>
+	        
 			</ul>
 		</nav>
+
 		<nav class="header-smart-menu">
     		
     			
@@ -83,14 +91,16 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">链接</a>
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友情链接</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">名言</a>
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">其他</a>
     			
             
 		</nav>
+		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=240 height=110 src="//music.163.com/outchain/player?type=0&id=2938973043&auto=1&height=90"></iframe>		
+
 		<nav class="header-nav">
 			<div class="social">
 				
@@ -112,7 +122,7 @@
 		        
 			</div>
 		</nav>
-	</header>		
+	</header>
 </div>
 
     </div>
@@ -133,6 +143,12 @@
 			</hgroup>
 			
 			
+			
+				
+			
+				
+			
+				
 			
 				
 			
@@ -167,11 +183,17 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 16.666666666666668%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/about/">关于</a></li>
+					<li style="width: 16.666666666666668%"><a href="/about/">关于</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/archives/">归档</a></li>
+					<li style="width: 16.666666666666668%"><a href="/archives/">归档</a></li>
+		        
+					<li style="width: 16.666666666666668%"><a href="/dlc/ssr.html">ssr分享</a></li>
+		        
+					<li style="width: 16.666666666666668%"><a href="/dlc/jsq.html">免费加速器</a></li>
+		        
+					<li style="width: 16.666666666666668%"><a href="/dlc/web/notitle.html">炫酷的网页</a></li>
 		        
 				</ul>
 			</nav>
@@ -237,7 +259,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv storage/shared/download/我的资源/Linux/kalifs-arm64-full.tar.xz ~/</span></span><br></pre></td></tr></table></figure>
 
 <p>*<em>注意：镜像文件有点大，移动过程会有点慢，请耐心等待出现 “ $ ” 即可。 *</em><br>获取并执行安装脚本： </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> wget -O install-nethunter-termux https://darkabyss.top/dlc/install-nethunter-termux</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> chmod +x install-nethunter-termux </span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./install-nethunter-termux</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> wget -O install-nethunter-termux https://pys0126.github.io/dlc/install-nethunter-termux</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> chmod +x install-nethunter-termux </span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./install-nethunter-termux</span></span><br></pre></td></tr></table></figure>
 <p>执行后可能会停住提示你:<code>[?] Existing image file found. Delete and download a new one? [y/N]</code>这里输入n回车即可，然后它会解压镜像，这个过程可能10-20分钟，请耐心等待，出现如下界面说明Kali已经安装成功了。<br><img src="https://cdn.jsdelivr.net/gh/pys0126/pys0126.github.io@master/2020/07/24/page6/4.jpg" alt="图片"></p>
 <h1 id="3-使用Kali-NetHunter"><a href="#3-使用Kali-NetHunter" class="headerlink" title="3.使用Kali NetHunter"></a>3.使用Kali NetHunter</h1><h2 id="Kali-NetHunter启动前命令"><a href="#Kali-NetHunter启动前命令" class="headerlink" title="Kali NetHunter启动前命令"></a>Kali NetHunter启动前命令</h2><p><strong>注意：在使用Kali之前可以把老王VPN关了，以免影响网速。</strong> </p>
 <p>在Termux执行以下命令之一： </p>
@@ -457,7 +479,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 04rk46y5s
+    		&copy; 2021 04rk46y5s
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -489,6 +511,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 
     
+
 <div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
   <div class="tools-nav header-menu">
     
@@ -515,11 +538,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">链接</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友情链接</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">名言</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">其他</a></li>
       
         
     </ul>
@@ -612,15 +635,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="/dlc/ssr.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>ssr分享</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="/dlc/jsq.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>免费加速器</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="/dlc/web/notitle.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>炫酷的网页</a>
+              <a href="https://syst1m.top" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>System的博客</a>
             </li>
           
         </ul>
@@ -631,7 +646,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">雪崩时，没有一片雪花是无辜的&lt;br&gt;(雪崩中，没有一片雪花觉得自己有责任)&lt;br&gt;--斯坦尼斯洛</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">雪崩时，没有一片雪花是无辜的&lt;br&gt;(雪崩中，没有一片雪花觉得自己有责任)&lt;br&gt;--斯坦尼斯洛-</div>
   	  	
     	</section>
     
