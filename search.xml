@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[去TM的学习通]]></title>
+    <url>%2F2021%2F01%2F30%2F%E5%8E%BBTM%E7%9A%84%E5%AD%A6%E4%B9%A0%E9%80%9A%2F</url>
+    <content type="text"><![CDATA[貌似仅支持CQCIVC学院，目前的功能：过PPT任务，视频任务（只支持点击开始播放按钮） 项目地址：https://github.com/pys0126/Fuck_CX下载地址：https://github.com/pys0126/Fuck_CX/archive/main.zip一、前提需要安装Python3和相关依赖 安装Python3 Windows和MacOS：https://www.python.org/downloads/release/python-379/ Linux自带 安装依赖： 在命令行窗口运行pip3 install -r requirements.txt Chrome浏览器及Webdriver Chrome下载地址：https://www.google.cn/chrome/ Webdriver下载地址：http://npm.taobao.org/mirrors/chromedriver/ 脚本设置 在脚本167行设置Chrome个人资料路径（在Chrome访问chrome://version/找到个人资料路径） 在脚本168行设置webdriver_path 获取Cookie（用于requests） 1.访问：http://mooc1-1.chaoxing.com/visit/interaction 2.登陆后按F12点击Network，刷新页面 3.点击XHR，点击workTestPendingNew 4.将Cookie项的值全部复制下来 手机号或用户名和密码（用于selenium） 按脚本提示输入即可 二、运行 在命令行窗口运行python3 fuck_cx(requests+selenium).py 三、可能会实现的功能 1.直接完成视频（利用刷网课扩展） 2.不需要Cookie（只利用selenium，效率可能会降低） 3.答题（再说吧…）]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Manjaro[KDE]安装到使用]]></title>
     <url>%2F2020%2F10%2F28%2Fpage8%2F</url>
     <content type="text"><![CDATA[折腾基于Arch的Linux发行版：Manjaro 【KDE桌面】，本文有一些我在安装和使用Manjaro中所遇到的问题和解决方案，包括英特尔+英伟达双显卡的驱动问题。 1.安装前1.进入到grub界面，首先选择语言为Chinese–&gt;zh-CN 2.选择drives=nofree（带有英伟达显卡的务必选这个） 2.进行安装主要是选择分区，分区步骤： 1.选择300M，格式为FAT32，挂载点为/boot/efi，标记为boot 2.选择15G，格式为exT4，挂载点为/opt 3.选择30G，格式为exT4，挂载点为/ 4.选择剩余空间，格式为exT4，挂载点为/home 5.点击下一步，点继续安装 注意：最好空出几个G空间出来，不要问为什么 3.安装后1.更改为国内软件源 1$ sudo pacman-mirrors -i -c China -m rank 然后选择延迟最低的源，点击确定2.更新软件源 1$ sudo pacman -Syyu 3.安装第三方包管理器yay和vim 12$ sudo pacman -S yay$ yay -S vim yay命令跟pacman命令用一样点参数，而且不用加sudo4.安装googlepinyin中文输入法 123$ yay -S fcitx-im$ yay -S fcitx-configtool$ yay -S fcitx-googlepinyin 使用vim编辑～/.xprofile文件，加入一下文本： 123$ export GTK_IM_MODULE=fcitx$ export QT_IM_MODULE=fcitx$ export XMODIFIERS="@im=fcitx" 5.安装解包之内工具： 1yay -S pkgconf fakeroot patch 6.如果发现系统没有声音，声音设备显示伪输出，执行以下命令（有声音就不用看这条） 12$ echo “options snd-hda-intel dmic_detect=0” | sudo tee -a /etc/modprobe.d/alsa-base.conf$ echo “blacklist snd_soc_skl” | sudo tee -a /etc/modprobe.d/blacklist.conf 7.完成以上操作就reboot 4.使用中1.科学上网 Qv2ray: 免安装程序 v2ray内核 ssr-gtk: ssr-gtk(需安装的包：media-control-indicator-git) 2.解决下载软件时git clone很慢的情况 配置git帐号信息 12$ git config --global user.name "你的git名称"$ git config --global user.email 你的git邮箱 生成SSH密钥 1$ ssh-keygen -t rsa -C “你的git邮箱” #一路回车 复制公钥 12$ cd .ssh/$ cat id_rsa.pub #将显示出来点公钥全部复制 进入你的github账户设置添加SSH密钥 设置git clone代理（每次开启代理都要设置，SSR端口默认为1080，Qv2ray默认为1089） 12$ git config --global http.proxy socks5://127.0.0.1:1080$ git config --global https.proxy socks5://127.0.0.1:1080 确保打开了SSR或者Qv2ray全局代理模式，然后便可以快速的clone了3.yay安装出现错误解决 如果出现以下错误 1fatal: 无法访问 '***'：OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to aur.archlinux.org:443 运行以下命令即可解决 1234$ git config --global --unset http.proxy#如果速度慢运行以下命令$ git config --global http.proxy socks5://127.0.0.1:1080$ git config --global https.proxy socks5://127.0.0.1:1080 4.安装美化下载工具 1$ yay -S ocs-url 5.解决QQ/Tim闪退，打不了中文 如果闪退，执行以下命令 12$ sudo pacman -S gnome-settings-daemon$ sudo cp /etc/xdg/autostart/org.gnome.SettingsDaemon.XSettings.desktop ~/.config/autostart 然后打开系统设置-&gt;开机或关机-&gt;自动启动-&gt;添加脚本-&gt;输入/usr/lib/gsd-xsettings，重启如果发现打不了中文在‘/opt/deepinwine/apps/Deepin-TIM/run.sh’开头加入以下命令，并重启： export GTK_IM_MODULE=fcitxexport QT_IM_MODULE=fcitxexport XMODIFIERS=@im=fcitx 安装TIM 1$ yay -S deepin-wine-tim 6.安装微信 12$ yay -S deepin-wine-wechat$ yay -S deepin-wine 修改以下两个文件的WINE_CMD的值 123$ sudo vim /opt/deepinwine/apps/Deepin-WeChat/run.sh$ sudo vim /opt/deepinwine/tools/run.sh# 改成WINE_CMD="deepin-wine" 7.解决网易云音乐无法加载问题（貌似能解决） 12$ yay -S automake autoconf bison flex$ yay -S gstreamer0.10-good-plugins 8.英特尔+英伟达双显卡，使用英伟达显卡运行程序用终端在需要用英伟达显卡执行的程序前加入“prime-run”命令： 1$ prime-run &lt;程序名&gt; 如果要使用英伟达显卡运行steam里面的游戏，则设置该游戏的启动选项为： 1prime-run %command% 9.出现Failed to connect to raw.githubusercontent.com:443的解决办法开启代理，1080需要换成你自己代理的端口(ssr) 1$ exportall_proxy=socks5://127.0.0.1:1080 关闭代理 1$ unset all_proxy]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>Manjaro</category>
+      </categories>
       <tags>
         <tag>Linux</tag>
       </tags>
